@@ -13,8 +13,16 @@ fun InitNavGraph(
         navController = navController,
         startDestination = Screen.Cartoons.route
     ) {
-        composable(Screen.Cartoons.route) {
-            CartoonScreen()
+        composable(
+            Screen.Cartoons.route
+        ) {
+            CartoonScreen(navController = navController)
+        }
+
+        composable(
+            Screen.CartoonDetail.route
+        ) {
+            CartoonDetailScreen()
         }
     }
 }
