@@ -1,2 +1,2 @@
 # MyFavoriteCartoons
-simple app give infarmation about cartoons building with Jetpack Compose
+simple app give information about cartoons building with Jetpack Compose
