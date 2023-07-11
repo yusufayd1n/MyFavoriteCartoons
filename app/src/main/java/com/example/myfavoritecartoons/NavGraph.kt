@@ -28,7 +28,6 @@ fun InitNavGraph(
                 type = NavType.IntType
             })
         ) {
-            Log.d("ARGS",it.arguments?.getInt(CARTOON_DETAIL_ID).toString())
             CartoonDetailScreen()
         }
     }
