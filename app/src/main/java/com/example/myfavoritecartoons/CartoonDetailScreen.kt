@@ -12,7 +12,11 @@ fun CartoonDetailScreen() {
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
-        Text(text = "Detail")
+        Column(
+
+        ) {
+
+        }
     }
 }
 

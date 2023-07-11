@@ -35,7 +35,7 @@ fun CartoonScreen(navController: NavController) {
                         .padding(16.dp)
                         .height(50.dp),
                     onClick = {
-                        navController.navigate(Screen.CartoonDetail.route)
+                        navController.navigate(Screen.CartoonDetail.passCartoonId(item.id))
                     }) {
                     Text(text = item.name, fontSize = 25.sp)
                 }

@@ -1,9 +1,12 @@
 package com.example.myfavoritecartoons
 
+import android.util.Log
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
+import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import androidx.navigation.navArgument
 
 @Composable
 fun InitNavGraph(
@@ -20,8 +23,12 @@ fun InitNavGraph(
         }
 
         composable(
-            Screen.CartoonDetail.route
+            Screen.CartoonDetail.route,
+            arguments = listOf(navArgument(CARTOON_DETAIL_ID) {
+                type = NavType.IntType
+            })
         ) {
+            Log.d("ARGS",it.arguments?.getInt(CARTOON_DETAIL_ID).toString())
             CartoonDetailScreen()
         }
     }
