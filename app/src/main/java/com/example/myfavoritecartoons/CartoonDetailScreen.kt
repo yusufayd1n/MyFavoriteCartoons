@@ -1,10 +1,11 @@
 package com.example.myfavoritecartoons
 
-import android.util.Log
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
@@ -25,7 +26,10 @@ fun CartoonDetailScreen(cartoonId: Int?) {
     ) {
         HorizontalPager(
             pageCount = cartoonDetail.getCartoonDetailsById()[0].list.size,
-            state = pagerState
+            state = pagerState,
+            modifier = Modifier
+                .fillMaxWidth()
+                .fillMaxHeight(0.5f)
         ) { index ->
             Image(
                 painter = painterResource(id = cartoonDetail.getCartoonDetailsById()[0].list[index]),
@@ -34,7 +38,7 @@ fun CartoonDetailScreen(cartoonId: Int?) {
 
                 )
         }
-        Log.d("YUYUYUYUUYUYUYUY", cartoonDetail.getCartoonDetailsById().toString())
+
     }
 }
 
