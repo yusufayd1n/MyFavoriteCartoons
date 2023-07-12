@@ -1,10 +1,9 @@
 package com.example.myfavoritecartoons.cartoonData
 
 import android.content.Context
-import androidx.compose.ui.platform.LocalContext
 import com.example.myfavoritecartoons.R
 
-class CartoonDetails(private val cartoonId: Int, val context: Context) {
+class CartoonDetails(private val cartoonId: Int, private val context: Context) {
 
     var cartoonDetailList: MutableList<CartoonDetail> = ArrayList()
     var cartoonImageList = listOf<Int>()
