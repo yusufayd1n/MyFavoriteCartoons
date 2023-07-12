@@ -1,12 +1,16 @@
 package com.example.myfavoritecartoons.cartoonData
 
+import android.content.Context
+import androidx.compose.ui.platform.LocalContext
 import com.example.myfavoritecartoons.R
 
-class CartoonDetails(private val cartoonId: Int) {
+class CartoonDetails(private val cartoonId: Int, val context: Context) {
 
-    var cartoonDetailList: MutableList<CartoonDetail> =ArrayList()
+    var cartoonDetailList: MutableList<CartoonDetail> = ArrayList()
     var cartoonImageList = listOf<Int>()
+
     fun setCartoonDetailData() {
+
         when (cartoonId) {
             1 -> {
                 cartoonImageList = listOf(
@@ -16,12 +20,13 @@ class CartoonDetails(private val cartoonId: Int) {
                     R.drawable.iv_yugioh_4,
                     R.drawable.iv_yugioh_5,
                 )
+
                 cartoonDetailList.add(
                     CartoonDetail(
                         cartoonId,
                         "Yu-Gi-Oh",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.YuGiOh_Description)
                     )
                 )
             }
@@ -34,12 +39,13 @@ class CartoonDetails(private val cartoonId: Int) {
                     R.drawable.iv_bakugan_4,
                     R.drawable.iv_bakugan_5,
                 )
+
                 cartoonDetailList.add(
                     CartoonDetail(
                         cartoonId,
                         "Bakugan",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.Bakugan_Description)
                     )
                 )
 
@@ -53,12 +59,13 @@ class CartoonDetails(private val cartoonId: Int) {
                     R.drawable.iv_pokemon_4,
                     R.drawable.iv_pokemon_5,
                 )
+
                 cartoonDetailList.add(
                     CartoonDetail(
                         cartoonId,
                         "Pokemon",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.Pokemon_Description)
                     )
                 )
             }
@@ -77,7 +84,7 @@ class CartoonDetails(private val cartoonId: Int) {
                         cartoonId,
                         "Clone Wars",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.Clone_Wars_Description)
                     )
                 )
             }
@@ -90,12 +97,13 @@ class CartoonDetails(private val cartoonId: Int) {
                     R.drawable.iv_samurai_4,
                     R.drawable.iv_samurai_5,
                 )
+
                 cartoonDetailList.add(
                     CartoonDetail(
                         cartoonId,
                         "Samurai-Jack",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.Samurai_Jack_Description)
                     )
                 )
             }
@@ -108,12 +116,13 @@ class CartoonDetails(private val cartoonId: Int) {
                     R.drawable.iv_scooby_4,
                     R.drawable.iv_scooby_5,
                 )
+
                 cartoonDetailList.add(
                     CartoonDetail(
                         cartoonId,
                         "Scooby Doo",
                         cartoonImageList,
-                        R.string.YuGiOh_Description.toString()
+                        context.getString(R.string.Scooby_Doo_Description)
                     )
                 )
             }
